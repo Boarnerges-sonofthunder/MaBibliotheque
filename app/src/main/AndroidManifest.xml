@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bibliotheque">
         <activity
+            android:name=".RechercherLivre"
+            android:exported="true" />
+        <activity
+            android:name=".AfficherLivre"
+            android:exported="true" />
+        <activity
+            android:name=".AjouterLivre"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

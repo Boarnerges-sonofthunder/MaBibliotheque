@@ -20,13 +20,15 @@ class MainActivity : AppCompatActivity() {
         val ActivAjout = Intent(this,AjouterLivre::class.java)
         val ActivAfficher = Intent(this,AfficherLivre::class.java)
         val ActivRecherche = Intent(this,RechercherLivre::class.java)
+        val ActivAfficherRecycl = Intent(this,AfficherLivreRecyleView::class.java)
 
         btnAjout.setOnClickListener {
             startActivity(ActivAjout)
         }
 
         btnAffiche.setOnClickListener {
-            startActivity(ActivAfficher)
+            //startActivity(ActivAfficher)
+            startActivity(ActivAfficherRecycl)
         }
 
         btnRecherche.setOnClickListener {

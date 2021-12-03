@@ -42,7 +42,6 @@ class AjouterLivre : AppCompatActivity() {
         val annee = txtAnneePub.text.toString()
         val local = txtLocal.text.toString()
 
-        //TODO: regler le probleme avec la variable page et la variable prix
         btnAjouterLivre.setOnClickListener {
                 //instancier un livre
                 var livre = Livres(txtTitre.text.toString(),txtAuteur.text.toString(),txtEditeur.text.toString(),

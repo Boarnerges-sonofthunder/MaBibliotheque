@@ -1,2 +1,0 @@
-com/example/bibliotheque/BuildConfig.java
- com.example.bibliotheque.BuildConfig

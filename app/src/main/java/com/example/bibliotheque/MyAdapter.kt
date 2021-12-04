@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class MyAdapter(var myContext: Context, var resource:Int, var items: List<Livres>): ArrayAdapter<Livres>(myContext,resource,items) {
+class MyAdapter(var myContext: Context, var resource:Int, var items: MutableList<Livres>): ArrayAdapter<Livres>(myContext,resource,items) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val layoutInflater: LayoutInflater = LayoutInflater.from(myContext)
@@ -22,4 +22,10 @@ class MyAdapter(var myContext: Context, var resource:Int, var items: List<Livres
 
         return view
     }
+
+
+
+
+
+
 }

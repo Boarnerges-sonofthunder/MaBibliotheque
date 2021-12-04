@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -14,7 +15,6 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-
 				List<Livres> lst_livre;
 				Context context;
 
@@ -39,6 +39,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 							holder.lblLocal.setText(lst_livre.get(position).get_localisation());
 							//Permet d'attribuer une image *NE PAS OUBLIER DE METTRE LA PERMISSION D'ACCES A INTERNET DANS LE MANIFESTE
 							//Glide.with(this.context).load("http://goo.gl/gEgYUd").into(imageView);
+
+
+								int newPosition = holder.getAdapterPosition();
+
+
 				}
 
 				@Override
@@ -58,5 +63,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 												lblTitre = itemView.findViewById(R.id.lblTitre);
 												lblLocal = itemView.findViewById(R.id.lblLocal);
 								}
+				}
+
+				public void removeItem(int position)
+				{
+								lst_livre.remove(position);
+								notifyItemRemoved(position);
+								notifyItemRangeChanged(position, lst_livre.size());
+				}
+
+				public void restoreItem(Livres livre,int position)
+				{
+								lst_livre.add(position,livre);
+								notifyItemInserted(position);
 				}
 }

@@ -44,9 +44,15 @@ class AjouterLivre : AppCompatActivity() {
 
         btnAjouterLivre.setOnClickListener {
                 //instancier un livre
-                var livre = Livres(txtTitre.text.toString(),txtAuteur.text.toString(),txtEditeur.text.toString(),
-                    Integer.parseInt(txtNbPage.text.toString()),txtPrix.text.toString().toDouble(),txtAnneePub.text.toString(),
-                    txtLocal.text.toString())
+                var livre = Livres(
+                    txtTitre.text.toString(),
+                    txtAuteur.text.toString(),
+                    txtEditeur.text.toString(),
+                    Integer.parseInt(txtNbPage.text.toString()),
+                    txtPrix.text.toString().toDouble(),
+                    txtAnneePub.text.toString(),
+                    txtLocal.text.toString(),
+                )
 
                 var db = LivreHelper(applicationContext)
                 db.addAll(livre)

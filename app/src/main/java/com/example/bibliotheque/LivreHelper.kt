@@ -5,7 +5,6 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
 import android.widget.Toast
 
 val TABLE_LIVRE = "Livre"
@@ -49,15 +48,14 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
 
     }
 
-    fun getAllBooks():List<Livres> {
-        //TODO:Trouver comment creer une liste et le retourner
+    fun getAllBooks():MutableList<Livres> {
         val db: SQLiteDatabase = this.readableDatabase
         val query:String = "SELECT * FROM " + TABLE_LIVRE
         val cur:Cursor = db.rawQuery(query,null)
 
         //Declaration de la liste et remplissage avec l'objet
         var mutLst = mutableListOf<Livres>()
-        var lst = listOf<Livres>()
+        //var lst = listOf<Livres>()
 
         if(cur.moveToFirst())
         {
@@ -72,6 +70,7 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
                 var livreAnnee = cur.getString(6)
                 var livreLocal = cur.getString(7)
 
+                //Initialiser un objet Livre et lui attribuer les données recuperés de la bd
                 var livre = Livres(livreId,livreTitre,livreAuteur,livreEditeur,livrePage,livrePrix,livreAnnee,livreLocal)
 
                 //Ajout de l'objet livre dans la liste
@@ -86,6 +85,16 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
         cur.close()
         db.close()
         return mutLst
+    }
+
+    fun deleteLivre(livre:Livres):Boolean
+    {
+        val db = this.writableDatabase
+        val query:String = "DELETE FROM " + TABLE_LIVRE + " WHERE " + COLUMN_ID + " = " + livre._id
+
+        val cur:Cursor = db.rawQuery(query, null)
+
+        return cur.moveToFirst()
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {

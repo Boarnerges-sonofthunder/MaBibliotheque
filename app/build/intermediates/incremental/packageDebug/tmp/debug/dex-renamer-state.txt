@@ -1,4 +1,4 @@
-#Fri Dec 03 11:33:16 EST 2021
+#Sat Dec 04 01:13:41 EST 2021
 base.2=C\:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
 path.2=5/classes.dex
 base.1=C\:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

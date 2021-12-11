@@ -55,7 +55,6 @@ public class AfficherLivreRecyleView extends AppCompatActivity implements Recycl
 								if(viewHolder instanceof RecyclerViewAdapter.ViewHolder)
 								{
 											String titre = livre_Liste.get(viewHolder.getAdapterPosition()).get_titre();
-											String local = livre_Liste.get(viewHolder.getAdapterPosition()).get_localisation();
 												LivreHelper db = new LivreHelper(this);
 
 												Livres deleteLivre = livre_Liste.get(viewHolder.getAdapterPosition());
@@ -67,8 +66,9 @@ public class AfficherLivreRecyleView extends AppCompatActivity implements Recycl
 												snackbar.setAction("Annuler", new View.OnClickListener() {
 																@Override
 																public void onClick(View view) {
-																				adapter.restoreItem(deleteLivre,deleteIndex);
 																				db.addAll(deleteLivre);
+																				adapter.restoreItem(deleteLivre,deleteIndex);
+
 																}
 												});
 												snackbar.setActionTextColor(Color.YELLOW);

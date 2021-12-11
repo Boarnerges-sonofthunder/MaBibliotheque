@@ -16,13 +16,14 @@ val COLUMN_NBPAGE = "nbPage"
 val COLUMN_PRIX = "prix"
 val COLUMN_ANNEEPUB = "anneePub"
 val COLUMN_LOCAL = "localisation"
+val COLUMN_IMAGEURL = "imgUrl";
 
 class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliotheque.db",null,1) {
     override fun onCreate(db: SQLiteDatabase?) {
         val sql = "CREATE TABLE IF NOT EXISTS " + TABLE_LIVRE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 COLUMN_TITRE + " TEXT," + COLUMN_AUTEUR + " TEXT," + COLUMN_EDITEUR + " TEXT," +
                 COLUMN_NBPAGE + " INTEGER," + COLUMN_PRIX + " INTEGER," + COLUMN_ANNEEPUB + " TEXT," +
-                COLUMN_LOCAL + " TEXT)"
+                COLUMN_LOCAL + " TEXT," + COLUMN_IMAGEURL + " TEXT)"
 
         db?.execSQL(sql)
     }
@@ -38,6 +39,7 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
         cv.put(COLUMN_PRIX,livre._prix)
         cv.put(COLUMN_ANNEEPUB,livre._anneePub)
         cv.put(COLUMN_LOCAL,livre._localisation)
+        cv.put(COLUMN_IMAGEURL,livre._imgUrl)
 
         val result = db.insert(TABLE_LIVRE,null,cv)
         if(result == -1.toLong())
@@ -67,9 +69,10 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
                 var livrePrix = cur.getDouble(5)
                 var livreAnnee = cur.getString(6)
                 var livreLocal = cur.getString(7)
+                var livreImage = cur.getString(8)
 
                 //Initialiser un objet Livre et lui attribuer les données recuperés de la bd
-                var livre = Livres(livreId,livreTitre,livreAuteur,livreEditeur,livrePage,livrePrix,livreAnnee,livreLocal)
+                var livre = Livres(livreId,livreTitre,livreAuteur,livreEditeur,livrePage,livrePrix,livreAnnee,livreLocal,livreImage)
 
                 //Ajout de l'objet livre dans la liste
                 mutLst.add(livre)

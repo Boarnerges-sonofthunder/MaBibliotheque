@@ -10,7 +10,7 @@ Je peux effectuer des recherches de livre selon des critères.
 Pour l'accomplissement de ce projet, j'utilise:
 -SQLite
 -Custom adapter
--RecyclerAdapter
+-RecyclerViewAdapter
 
 Pour l'affichage j'utilise l'un ou l'autre de ces méthodes:
 -Listview

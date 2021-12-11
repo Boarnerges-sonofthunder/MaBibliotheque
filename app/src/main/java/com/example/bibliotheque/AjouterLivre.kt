@@ -20,6 +20,7 @@ class AjouterLivre : AppCompatActivity() {
         val txtAnneePub = findViewById<EditText>(R.id.txtAnnePublication)
         val txtLocal = findViewById<EditText>(R.id.txtLocalisation)
         val btnAjouterLivre = findViewById<Button>(R.id.btnAjouterLivre)
+        val txtImgUrl = findViewById<EditText>(R.id.txtUrlImage)
 
         //recuperation des données entrees par l'utilisateur
         val titre = txtTitre.text.toString()
@@ -41,6 +42,7 @@ class AjouterLivre : AppCompatActivity() {
         }
         val annee = txtAnneePub.text.toString()
         val local = txtLocal.text.toString()
+        val img = txtImgUrl.text.toString()
 
         btnAjouterLivre.setOnClickListener {
                 //instancier un livre
@@ -52,6 +54,7 @@ class AjouterLivre : AppCompatActivity() {
                     txtPrix.text.toString().toDouble(),
                     txtAnneePub.text.toString(),
                     txtLocal.text.toString(),
+                    txtImgUrl.text.toString(),
                 )
 
                 var db = LivreHelper(applicationContext)

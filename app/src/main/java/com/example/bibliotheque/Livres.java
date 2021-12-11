@@ -9,8 +9,9 @@ public class Livres {
 				private double _prix;
 				private String _anneePub;
 				private String _localisation;
+				private String _imgUrl;
 
-				public Livres(int _id, String _titre, String _auteur, String _editeur, int _nbPage, double _prix, String _anneePub, String _localisation) {
+				public Livres(int _id, String _titre, String _auteur, String _editeur, int _nbPage, double _prix, String _anneePub, String _localisation,String _imgUrl) {
 								this._id = _id;
 								this._titre = _titre;
 								this._auteur = _auteur;
@@ -19,9 +20,10 @@ public class Livres {
 								this._prix = _prix;
 								this._anneePub = _anneePub;
 								this._localisation = _localisation;
+								this._imgUrl = _imgUrl;
 				}
 
-				public Livres(String _titre, String _auteur, String _editeur, int _nbPage, double _prix, String _anneePub, String _localisation) {
+				public Livres(String _titre, String _auteur, String _editeur, int _nbPage, double _prix, String _anneePub, String _localisation,String _imgUrl) {
 								this._titre = _titre;
 								this._auteur = _auteur;
 								this._editeur = _editeur;
@@ -29,6 +31,15 @@ public class Livres {
 								this._prix = _prix;
 								this._anneePub = _anneePub;
 								this._localisation = _localisation;
+								this._imgUrl = _imgUrl;
+				}
+
+				public String get_imgUrl() {
+								return _imgUrl;
+				}
+
+				public void set_imgUrl(String _imgUrl) {
+								this._imgUrl = _imgUrl;
 				}
 
 				public int get_id() {

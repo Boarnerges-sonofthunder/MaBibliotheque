@@ -2320,6 +2320,7 @@ id txtLocalisation
 id txtNbPage
 id txtPrix
 id txtTitre
+id txtUrlImage
 id unchecked
 id uniform
 id unlabeled

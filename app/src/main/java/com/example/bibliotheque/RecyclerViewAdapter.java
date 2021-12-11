@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,7 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 							holder.lblTitre.setText(lst_livre.get(position).get_titre());
 							holder.lblLocal.setText(lst_livre.get(position).get_localisation());
 							//Permet d'attribuer une image *NE PAS OUBLIER DE METTRE LA PERMISSION D'ACCES A INTERNET DANS LE MANIFESTE
-							//Glide.with(this.context).load("http://goo.gl/gEgYUd").into(imageView);
+							Glide.with(this.context).load(lst_livre.get(position).get_imgUrl()).into(holder.txtUrlimage);
 
 
 								int newPosition = holder.getAdapterPosition();
@@ -57,11 +58,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 								//on defini les elements dans le layout_livre.xml
 								TextView lblTitre;
 								TextView lblLocal;
+								ImageView txtUrlimage;
 
 								public ViewHolder(@NonNull View itemView) {
 												super(itemView);
 												lblTitre = itemView.findViewById(R.id.lblTitre);
 												lblLocal = itemView.findViewById(R.id.lblLocal);
+												txtUrlimage = itemView.findViewById(R.id.imgLivre);
 								}
 				}
 

@@ -44,8 +44,6 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
             Toast.makeText(context,"insertion echoué",Toast.LENGTH_SHORT).show()
         else
             Toast.makeText(context,"succes",Toast.LENGTH_SHORT).show()
-
-
     }
 
     fun getAllBooks():MutableList<Livres> {

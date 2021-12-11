@@ -1,110 +1,97 @@
-package com.example.bibliotheque
+package com.example.bibliotheque;
 
-class Livres {
-				private var _id = 0
-				private var _titre: String
-				private var _auteur: String
-				private var _editeur: String
-				private var _nbPage: Int
-				private var _prix: Double
-				private var _anneePub: String
-				private var _localisation: String
+public class Livres {
+				private int _id;
+				private String _titre;
+				private String _auteur;
+				private String _editeur;
+				private int _nbPage;
+				private double _prix;
+				private String _anneePub;
+				private String _localisation;
 
-				constructor(_id: Int,
-				            _titre: String,
-				            _auteur: String,
-				            _editeur: String,
-				            _nbPage: Int,
-				            _prix: Double,
-				            _anneePub: String,
-				            _localisation: String) {
-								this._id = _id
-								this._titre = _titre
-								this._auteur = _auteur
-								this._editeur = _editeur
-								this._nbPage = _nbPage
-								this._prix = _prix
-								this._anneePub = _anneePub
-								this._localisation = _localisation
+				public Livres(int _id, String _titre, String _auteur, String _editeur, int _nbPage, double _prix, String _anneePub, String _localisation) {
+								this._id = _id;
+								this._titre = _titre;
+								this._auteur = _auteur;
+								this._editeur = _editeur;
+								this._nbPage = _nbPage;
+								this._prix = _prix;
+								this._anneePub = _anneePub;
+								this._localisation = _localisation;
 				}
 
-				constructor(_titre: String,
-				            _auteur: String,
-				            _editeur: String,
-				            _nbPage: Int,
-				            _prix: Double,
-				            _anneePub: String,
-				            _localisation: String) {
-								this._titre = _titre
-								this._auteur = _auteur
-								this._editeur = _editeur
-								this._nbPage = _nbPage
-								this._prix = _prix
-								this._anneePub = _anneePub
-								this._localisation = _localisation
+				public Livres(String _titre, String _auteur, String _editeur, int _nbPage, double _prix, String _anneePub, String _localisation) {
+								this._titre = _titre;
+								this._auteur = _auteur;
+								this._editeur = _editeur;
+								this._nbPage = _nbPage;
+								this._prix = _prix;
+								this._anneePub = _anneePub;
+								this._localisation = _localisation;
 				}
 
-				fun get_id(): Int {
-								return _id
+				public int get_id() {
+								return _id;
 				}
 
-				fun set_id(_id: Int) {
-								this._id = _id
+				public void set_id(int _id) {
+								this._id = _id;
 				}
 
-				fun get_titre(): String {
-								return _titre
+				public String get_titre() {
+								return _titre;
 				}
 
-				fun set_titre(_titre: String) {
-								this._titre = _titre
+				public void set_titre(String _titre) {
+								this._titre = _titre;
 				}
 
-				fun get_auteur(): String {
-								return _auteur
+				public String get_auteur() {
+								return _auteur;
 				}
 
-				fun set_auteur(_auteur: String) {
-								this._auteur = _auteur
+				public void set_auteur(String _auteur) {
+								this._auteur = _auteur;
 				}
 
-				fun get_editeur(): String {
-								return _editeur
+				public String get_editeur() {
+								return _editeur;
 				}
 
-				fun set_editeur(_editeur: String) {
-								this._editeur = _editeur
+				public void set_editeur(String _editeur) {
+								this._editeur = _editeur;
 				}
 
-				fun get_nbPage(): Int {
-								return _nbPage
+				public int get_nbPage() {
+								return _nbPage;
 				}
 
-				fun set_nbPage(_nbPage: Int) {
-								this._nbPage = _nbPage
+				public void set_nbPage(int _nbPage) {
+								this._nbPage = _nbPage;
 				}
 
-				fun get_prix(): Double {
-								return _prix
+				public double get_prix() {
+								return _prix;
 				}
 
-				fun set_prix(_prix: Double) {
-								this._prix = _prix
+				public void set_prix(double _prix) {
+								this._prix = _prix;
 				}
 
-				fun get_anneePub(): String {
-								return _anneePub
+				public String get_anneePub() {
+								return _anneePub;
 				}
 
-				fun set_anneePub(_anneePub: String) {
-								this._anneePub = _anneePub
+				public void set_anneePub(String _anneePub) {
+								this._anneePub = _anneePub;
 				}
 
-				fun get_localisation(): String {
-								return _localisation
+				public String get_localisation() {
+								return _localisation;
 				}
 
-				fun set_localisation(_localisation: String) {
-								this._localisation = _localisation
+				public void set_localisation(String _localisation) {
+								this._localisation = _localisation;
 				}
 }

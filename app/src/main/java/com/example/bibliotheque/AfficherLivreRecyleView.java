@@ -45,16 +45,8 @@ public class AfficherLivreRecyleView extends AppCompatActivity implements Recycl
 								mRecycler.setHasFixedSize(true);
 								mRecycler.setAdapter(adapter);
 
-								ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new SwipeToDeleteCallback(0,ItemTouchHelper.LEFT,this);
+								ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new SwipeToDeleteCallback(0,ItemTouchHelper.LEFT,this,getApplicationContext());
 								new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(mRecycler);
-
-
-
-
-								//mAdapter = new RecyclerViewAdapter(livre_Liste,this);
-
-								//ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new SwipeToDeleteCallback(mAdapter));
-								//itemTouchHelper.attachToRecyclerView(mRecycler);
 				}
 
 
@@ -71,11 +63,12 @@ public class AfficherLivreRecyleView extends AppCompatActivity implements Recycl
 												db.deleteLivre(deleteLivre);
 												adapter.removeItem(deleteIndex);
 
-												Snackbar snackbar = Snackbar.make(rootLayout,titre +"Supprimer de la liste",Snackbar.LENGTH_LONG);
-												snackbar.setAction("Undo", new View.OnClickListener() {
+												Snackbar snackbar = Snackbar.make(mRecycler,titre +"Supprimer de la liste",Snackbar.LENGTH_LONG);
+												snackbar.setAction("Annuler", new View.OnClickListener() {
 																@Override
 																public void onClick(View view) {
-																			adapter.restoreItem(deleteLivre,deleteIndex);
+																				adapter.restoreItem(deleteLivre,deleteIndex);
+																				db.addAll(deleteLivre);
 																}
 												});
 												snackbar.setActionTextColor(Color.YELLOW);

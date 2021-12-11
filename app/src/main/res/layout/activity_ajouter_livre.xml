@@ -7,78 +7,90 @@
     android:orientation="vertical"
     tools:context=".AjouterLivre">
 
-    <ImageView
-        android:id="@+id/imgView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="118dp"
-        app:srcCompat="@drawable/livre" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/txtTitre"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="Titre"
-        android:inputType="textPersonName"
-        android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/txtAuteur"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="Auteur"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                app:srcCompat="@drawable/livre" />
 
-    <EditText
-        android:id="@+id/txtEditeur"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="Editeur"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/txtTitre"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Titre"
+                android:inputType="textPersonName"
+                android:textColor="@color/black" />
 
-    <EditText
-        android:id="@+id/txtNbPage"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="Nombre de page"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/txtAuteur"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Auteur"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/txtPrix"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="Prix"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/txtEditeur"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Editeur"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/txtAnnePublication"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="Annee de publication"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/txtNbPage"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Nombre de page"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/txtLocalisation"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="Localisation"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/txtPrix"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Prix"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
-    <Button
-        android:id="@+id/btnAjouterLivre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ajouter" />
+            <EditText
+                android:id="@+id/txtAnnePublication"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Annee de publication"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/txtLocalisation"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Localisation"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btnAjouterLivre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ajouter" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

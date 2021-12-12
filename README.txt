@@ -15,3 +15,4 @@ Pour l'accomplissement de ce projet, j'utilise:
 Pour l'affichage j'utilise l'un ou l'autre de ces méthodes:
 -Listview
 -RecyclerView
+-Glide (Pour l'affichage des images)

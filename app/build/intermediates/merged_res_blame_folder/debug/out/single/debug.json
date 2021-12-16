@@ -64,6 +64,10 @@
         "source": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_edit_dialog.xml.flat",
+        "source": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\src\\main\\res\\layout\\custom_edit_dialog.xml"
+    },
+    {
         "merged": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_afficher_livre.xml.flat",
         "source": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\src\\main\\res\\layout\\activity_afficher_livre.xml"
     },
@@ -94,6 +98,10 @@
     {
         "merged": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\build\\intermediates\\merged_res\\debug\\layout-sw600dp_layout_livre.xml.flat",
+        "source": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\src\\main\\res\\layout-sw600dp\\layout_livre.xml"
     },
     {
         "merged": "C:\\Users\\BMilc\\Desktop\\Teccart\\Session4\\DevMob2\\MaBibliotheque\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",

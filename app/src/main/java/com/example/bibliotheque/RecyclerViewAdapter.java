@@ -45,20 +45,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 							holder.lblLocal.setText(lst_livre.get(position).get_localisation());
 							//Permet d'attribuer une image *NE PAS OUBLIER DE METTRE LA PERMISSION D'ACCES A INTERNET DANS LE MANIFESTE et l'implementation dans build.gradle
 							Glide.with(this.context).load(lst_livre.get(position).get_imgUrl()).into(holder.txtUrlimage);
-							
+
 							//TODO:Trouver comment afficher un alertDialog
 							//On affiche la page pour faire un update du livre
-							holder.parentLayout.setOnClickListener(new View.OnClickListener() {
+							holder.parentLayout.setOnLongClickListener(new View.OnLongClickListener() {
 											@Override
-											public void onClick(View view) {
-															AlertDialog.Builder myDialog = new AlertDialog.Builder(context.getApplicationContext());
+											public boolean onLongClick(View view) {
+															AlertDialog.Builder myDialog = new AlertDialog.Builder(context);
 															myDialog.setTitle("Modifier ce livre");
+															myDialog.setView(R.layout.custom_edit_dialog);
 
 															//Approuver la modification
 															myDialog.setPositiveButton("Appliquer", new DialogInterface.OnClickListener() {
 																			@Override
 																			public void onClick(DialogInterface dialogInterface, int i) {
-																					//faire le update
+																							//faire le update
 																							Toast.makeText(context,"alert dialog",Toast.LENGTH_LONG).show();
 																			}
 															});
@@ -67,10 +68,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 															myDialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
 																			@Override
 																			public void onClick(DialogInterface dialogInterface, int i) {
-																					dialogInterface.cancel();
+																							dialogInterface.cancel();
 																			}
 															});
 															myDialog.show();
+
+															return true;
 											}
 							});
 

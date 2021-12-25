@@ -2079,6 +2079,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id lblLivreId
 id lblLocal
 id lblTitre
 id left
@@ -2329,12 +2330,12 @@ id txtAuteur
 id txtAuteurMod
 id txtEditeur
 id txtEditeurMod
+id txtLocalMod
 id txtLocalisation
 id txtNbPage
 id txtNbPageMod
 id txtPrix
 id txtPrixmod
-id txtPubliMod
 id txtTitre
 id txtTitreMod
 id txtUrlImage

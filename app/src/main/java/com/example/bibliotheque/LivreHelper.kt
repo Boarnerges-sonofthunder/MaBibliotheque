@@ -98,7 +98,7 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
         return cur.moveToFirst()
     }
 
-    fun updateLivre(livre:Livres):Boolean
+    fun updateLivre(livre:Livres):Int
     {
         val db = this.writableDatabase
         val cv = ContentValues()
@@ -112,9 +112,10 @@ class LivreHelper(val context : Context) : SQLiteOpenHelper(context,"Bibliothequ
         cv.put(COLUMN_LOCAL,livre._localisation)
         cv.put(COLUMN_IMAGEURL,livre._imgUrl)
 
-        db.update(TABLE_LIVRE,cv, COLUMN_ID, arrayOf(livre._id.toString()))
+        val succes =  db.update(TABLE_LIVRE,cv, "$COLUMN_ID = ?", arrayOf(livre._id.toString()))
+        db.close()
 
-        return true
+        return succes
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {

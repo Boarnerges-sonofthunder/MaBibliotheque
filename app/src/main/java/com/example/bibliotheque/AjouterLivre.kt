@@ -59,7 +59,7 @@ class AjouterLivre : AppCompatActivity() {
 
                 var db = LivreHelper(applicationContext)
                 db.addAll(livre)
-        }
 
+        }
     }
 }

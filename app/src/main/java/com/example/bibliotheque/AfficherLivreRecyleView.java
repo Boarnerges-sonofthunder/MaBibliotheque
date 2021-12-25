@@ -22,7 +22,6 @@ import java.util.List;
 
 public class AfficherLivreRecyleView extends AppCompatActivity implements RecyclerItemTouchHelperListener {
 				private RecyclerView mRecycler;
-				private RecyclerView.Adapter mAdapter;
 				private RecyclerView.LayoutManager mLayoutManager;
 				private RecyclerViewAdapter adapter;
 				private LinearLayout rootLayout;

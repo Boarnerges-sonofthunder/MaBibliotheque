@@ -22,6 +22,12 @@
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/lblLivreId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -132,7 +138,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/txtPubliMod"
+                android:id="@+id/txtLocalMod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
